@@ -1,5 +1,5 @@
 #%RAML 1.0
-title: Accounts Sapi
+title: Orders Sapi
 description: API Catalog test for Accounts SAPI
 protocols: [HTTP, HTTPS]
 mediaType: [application/json]
@@ -16,32 +16,12 @@ baseUri: /api/{version}
             "status": "Running"
           }
 
-/endpoint1:
+/orders:
   get:
     responses: 
       200:
         body:
           type: object
           example: {
-            "status": "endpoint-details"
-          }
-
-/endpoint2:
-  get:
-    responses: 
-      200:
-        body:
-          type: object
-          example: {
-            "status": "endpoint2-details"
-          }
-
-/endpoint3:
-  get:
-    responses: 
-      200:
-        body:
-          type: object
-          example: {
-            "status": "endpoint3-details"
+            "status": "order-details"
           }
