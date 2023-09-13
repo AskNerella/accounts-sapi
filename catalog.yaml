@@ -1,0 +1,23 @@
+#%Catalog Descriptor 1.0
+projects:
+  - main: accounts-sapi.raml
+    assetId: accounts-sapi
+    version: 1.0.0
+    apiVersion: v1
+    documentation:
+      - Home: docs/home.md
+    tags:
+      - api-catalog
+      - sapi
+      - accounts
+    contact:
+      name: "Sravan Nerella"
+      email: "snerella@open-logix.com"
+    versionStrategy: majorIncrease
+    versionStrategyConditions:
+      minorIncrease:
+        branches:
+          - main
+      snapshot:
+        branches:
+          - develop

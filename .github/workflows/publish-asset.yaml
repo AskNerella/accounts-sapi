@@ -1,0 +1,29 @@
+name: Publish API Specification to Exchange
+
+on:
+  pull_request:
+    branches: ["main", "develop"]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout Source Code
+        uses: actions/checkout@v3
+      
+      - name: Installing API Catalog CLI
+        run: |
+          sudo apt-get update
+          npm i -g api-catalog-cli@latest
+      
+      - name: Publish to Exchange
+        env:
+          ANYPOINT_CLIENT_ID: ${{secrets.CLIENT_ID}}
+          ANYPOINT_CLIENT_SECRET: ${{secrets.CLIENT_SECRET}}
+          ANYPOINT_ORG_ID: ${{secrets.ORG_ID}}
+        run: |
+          api-catalog publish-asset --organization="$ANYPOINT_ORG_ID" --client_id="$ANYPOINT_CLIENT_ID" --client_secret="$ANYPOINT_CLIENT_SECRET"
+      
+      
+      
