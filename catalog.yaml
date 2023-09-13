@@ -5,7 +5,7 @@ projects:
     version: 1.0.0
     apiVersion: v1
     documentation:
-      - Home: docs/home.md
+      Home: docs/home.md
     tags:
       - api-catalog
       - sapi
