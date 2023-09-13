@@ -1,0 +1,27 @@
+#%RAML 1.0
+title: Accounts Sapi
+description: API Catalog test for Accounts SAPI
+protocols: [HTTP, HTTPS]
+mediaType: [application/json]
+version: v1
+baseUri: /api/{version}
+
+/health:
+  get:
+    responses: 
+      200:
+        body:
+          type: object
+          example: {
+            "status": "Running"
+          }
+
+/orders:
+  get:
+    responses: 
+      200:
+        body:
+          type: object
+          example: {
+            "status": "order-details"
+          }

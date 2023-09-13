@@ -1,5 +1,17 @@
 #%Catalog Descriptor 1.0
 projects:
+  - main: orders-sapi.raml
+    assetId: orders-sapi
+    version: 1.0.0
+    apiVersion: v1
+    tags:
+      - api-catalog
+      - sapi
+      - accounts
+    contact:
+      name: "Sravan Nerella"
+      email: "snerella@open-logix.com"
+
   - main: accounts-sapi.raml
     assetId: accounts-sapi
     version: 1.0.0
