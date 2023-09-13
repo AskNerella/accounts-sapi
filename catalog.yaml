@@ -25,6 +25,7 @@ projects:
     contact:
       name: "Sravan Nerella"
       email: "snerella@open-logix.com"
+    versionStrategy: snapshot
     versionStrategyConditions:
       minorIncrease:
         branches:
